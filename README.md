@@ -1,0 +1,75 @@
+<div align="center">
+  <img src="https://lucide.dev/icons/sparkles.svg" width="80" alt="NeatOS Logo" />
+  <br/>
+  <h1>NeatOS</h1>
+  <p><strong>Smart, adaptive, and beautiful file organization system.</strong></p>
+  
+  <p>
+    <a href="https://github.com/danielSmage/NeatOS/actions"><img src="https://img.shields.io/github/actions/workflow/status/danielSmage/NeatOS/build.yml?style=flat-square" alt="Build Status" /></a>
+    <a href="#license"><img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square" alt="License" /></a>
+    <a href="https://electronjs.org"><img src="https://img.shields.io/badge/built%20with-Electron-2B2E3A.svg?style=flat-square" alt="Built with Electron" /></a>
+  </p>
+</div>
+
+<br/>
+
+## ✨ Introduction
+
+**NeatOS** is a next-generation desktop application designed to eliminate digital clutter. By leveraging intelligent pattern recognition, advanced algorithms, and a sleek modern UI (inspired by Vercel and Notion), it automatically organizes any folder into well-structured categories with a single click.
+
+## 🚀 Features
+
+- 🧠 **Intelligent Pattern Matching**: Detects contextual filenames (e.g., `screenshot`, `invoice`, `installer`) to accurately sort files.
+- 📂 **Auto-Categorization**: Organizes by standard formats (Images, Videos, Documents, Music, Executables, and ZIPs).
+- 🔄 **Real-Time Watcher**: Runs silently in the background, keeping watched folders perfectly organized as new files arrive.
+- 🎨 **Glassmorphism UI**: A stunning, ultra-minimalist interface with seamless Light/Dark mode transitions.
+- 🛡️ **Fail-Safe Mechanism**: Guarantees zero data loss with intelligent auto-renaming, avoiding file overrides.
+- ⏪ **Action History & Undo**: Provides a complete log of organized files with a 1-click Undo function.
+
+## 🛠️ Architecture
+
+NeatOS is built using an enterprise-grade modular architecture:
+
+```text
+src/
+├── core/
+│   └── organizer.js    # Core logic (file movement, rules, intelligence)
+├── services/
+│   ├── store.js        # Data persistence (Electron Store)
+│   └── watcher.js      # Background file monitoring (Chokidar)
+```
+
+## 📦 Installation & Usage
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/danielSmage/NeatOS.git
+   cd NeatOS
+   ```
+
+2. **Install dependencies:**
+
+   ```bash
+   npm install
+   ```
+
+3. **Start the application (Development):**
+
+   ```bash
+   npm start
+   ```
+
+4. **Build the executable:**
+   ```bash
+   npm run build
+   ```
+   > The generated setup file will be located in the `dist/` directory.
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/danielSmage/NeatOS/issues).
+
+## 📜 License
+
+This project is [MIT](https://choosealicense.com/licenses/mit/) licensed.

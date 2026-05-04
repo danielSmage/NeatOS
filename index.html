@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NeatOS</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="theme-dark">
+    <div class="drag-area"></div>
+
+    <div class="top-nav">
+      <button id="theme-toggle" class="icon-btn" title="Alternar Tema">
+        <i data-lucide="sun"></i>
+      </button>
+      <button id="history-toggle" class="icon-btn" title="Histórico e Configurações">
+        <i data-lucide="history"></i>
+      </button>
+    </div>
+
+    <div class="app-container">
+      <div class="glow glow-1"></div>
+      <div class="glow glow-2"></div>
+
+      <main class="glass-panel">
+        <header class="header">
+          <div class="icon-container">
+            <i data-lucide="sparkles" class="title-icon"></i>
+          </div>
+          <h1>NeatOS</h1>
+          <p class="subtitle">Organização inteligente e automática</p>
+        </header>
+
+        <div class="actions">
+          <button id="select-btn" class="btn btn-secondary">
+            <i data-lucide="folder-search"></i>
+            <span>Selecionar Pasta</span>
+          </button>
+
+          <div id="path-display" class="path-display hidden">
+            <i data-lucide="folder"></i>
+            <span id="selected-path" class="truncate"></span>
+
+            <label
+              class="toggle-switch hint-tooltip"
+              title="Manter monitorando e organizando automaticamente"
+            >
+              <input type="checkbox" id="watcher-toggle" />
+              <span class="slider"></span>
+            </label>
+          </div>
+
+          <button id="organize-btn" class="btn btn-primary" disabled>
+            <i data-lucide="zap"></i>
+            <span>Organizar Agora</span>
+          </button>
+        </div>
+
+        <div id="feedback-area" class="feedback-area hidden">
+          <div class="progress-bar-container">
+            <div class="progress-bar"></div>
+          </div>
+          <div class="status-message">
+            <span id="status-icon-wrapper">
+              <i data-lucide="loader-2" class="spin"></i>
+            </span>
+            <span id="status-text">Analisando e organizando...</span>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- History & Settings Panel -->
+    <div id="history-panel" class="side-panel">
+      <div class="panel-header">
+        <h2>Histórico</h2>
+        <button id="close-history" class="icon-btn"><i data-lucide="x"></i></button>
+      </div>
+      <div class="panel-content">
+        <button id="undo-btn" class="btn btn-secondary danger-hover hidden">
+          <i data-lucide="undo-2"></i>
+          <span>Desfazer última ação</span>
+        </button>
+
+        <div id="history-list" class="history-list">
+          <!-- History items will be injected here -->
+        </div>
+      </div>
+    </div>
+    <div id="panel-overlay" class="panel-overlay"></div>
+
+    <script src="renderer.js"></script>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+{
+  "name": "neatos",
+  "version": "1.0.0",
+  "description": "Smart, adaptive, and beautiful file organization system.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder -w",
+    "lint": "eslint src main.js preload.js renderer.js",
+    "format": "prettier --write \"**/*.{js,css,html,md}\""
+  },
+  "build": {
+    "appId": "com.danielsmage.neatos",
+    "productName": "NeatOS",
+    "win": {
+      "target": "nsis"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true
+    }
+  },
+  "author": "Daniel Smage",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/danielSmage/NeatOS.git"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^30.0.0",
+    "electron-builder": "^26.8.1",
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.8.3"
+  },
+  "dependencies": {
+    "chokidar": "^3.6.0",
+    "electron-store": "^8.1.0"
+  }
+}
