@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://lucide.dev/icons/sparkles.svg" width="80" alt="NeatOS Logo" />
+  <img src="icon.png" width="150" alt="NeatOS Logo" />
   <br/>
   <h1>NeatOS</h1>
   <p><strong>Smart, adaptive, and beautiful file organization system.</strong></p>

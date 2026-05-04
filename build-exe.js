@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-const pngToIco = require('png-to-ico');
+const pngToIco = require('png-to-ico').default || require('png-to-ico');
 
 async function build() {
   const pngPath = path.join(__dirname, 'icon.png');
