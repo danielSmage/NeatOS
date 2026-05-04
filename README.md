@@ -39,6 +39,12 @@ src/
 │   └── watcher.js      # Background file monitoring (Chokidar)
 ```
 
+## 📋 Prerequisites
+
+Before you begin, ensure you have met the following requirements:
+* You have installed **[Node.js](https://nodejs.org/en/)** (v18.0.0 or higher) and **npm**.
+* You have a basic understanding of terminal commands.
+
 ## 📦 Installation & Usage
 
 1. **Clone the repository:**
@@ -64,7 +70,16 @@ src/
    ```bash
    npm run build
    ```
-   > The generated setup file will be located in the `dist/` directory.
+   > The generated executable and standalone folder will be located in the `dist_standalone/` directory.
+
+## 🧰 Core Technologies & Dependencies
+
+NeatOS is powered by a carefully curated stack to ensure maximum performance and security:
+- **[Electron](https://www.electronjs.org/)** (`^30.0.0`) - The core framework for cross-platform desktop functionality.
+- **[Chokidar](https://github.com/paulmillr/chokidar)** (`^3.6.0`) - High-performance file system watcher for real-time background automation.
+- **[Electron-Store](https://github.com/sindresorhus/electron-store)** (`^8.1.0`) - Simple data persistence for saving intelligent rules and organization history.
+- **[Lucide](https://lucide.dev/)** - Beautiful, consistent iconography for the UI.
+- **[ESLint](https://eslint.org/) & [Prettier](https://prettier.io/)** - For enforcing strict code quality and formatting standards.
 
 ## 🤝 Contributing
 
