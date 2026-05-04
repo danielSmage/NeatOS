@@ -6,6 +6,7 @@
   "scripts": {
     "start": "electron .",
     "build": "electron-builder -w",
+    "build:exe": "node build-exe.js",
     "lint": "eslint src main.js preload.js renderer.js",
     "format": "prettier --write \"**/*.{js,css,html,md}\""
   },
@@ -32,6 +33,7 @@
     "electron-builder": "^26.8.1",
     "eslint": "^8.57.1",
     "eslint-config-prettier": "^10.1.8",
+    "png-to-ico": "^3.0.1",
     "prettier": "^3.8.3"
   },
   "dependencies": {

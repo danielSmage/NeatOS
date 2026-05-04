@@ -21,6 +21,7 @@ function createWindow() {
       contextIsolation: true
     },
     autoHideMenuBar: true,
+    icon: path.join(__dirname, 'icon.png'),
     titleBarStyle: 'hidden',
     titleBarOverlay: {
       color: store.get('theme') === 'dark' ? '#050505' : '#ffffff',
